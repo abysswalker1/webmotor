@@ -1,3 +1,32 @@
+@import './scss/reset.scss';
+@import './scss/fonts.scss';
+
 :root {
-  
+  --primary: #0078EE;
+  --text-black: #2B3343;
+  --text-gray: #ADB6BF;
+  --bg: #F2F0F0;
+}
+
+body {
+  color: var(--text-black);
+  font-family: 'Cera Pro', sans-serif;
+}
+
+.container {
+  max-width: 1479px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+h2, h3 {
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
 }

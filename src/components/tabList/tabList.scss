@@ -1,0 +1,16 @@
+.tab-list {
+  flex: 1;
+}
+
+.tab {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 26px 20px;
+  cursor: pointer;
+  &.current {
+    background-color: var(--primary);
+    color: #fff;
+  }
+}
