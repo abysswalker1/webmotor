@@ -6,9 +6,9 @@ import store from '../../store/store';
 const TabList: FC = () => {
   const { tabList } = store;
   return (
-    <div className='tab-list'>
+    <section className='tab-list'>
       {tabList.map(tab => <Tab {...tab} key={`tab-${tab.id}`}/>)}
-    </div>
+    </section>
   );
 };
 
