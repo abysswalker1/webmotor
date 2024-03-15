@@ -13,10 +13,8 @@ body {
   font-family: 'Cera Pro', sans-serif;
 }
 
-.container {
-  max-width: 1479px;
-  margin: 0 auto;
-  padding: 0 10px;
+h2, h3{
+  line-height: 100%;
 }
 
 h2, h3 {
@@ -24,9 +22,42 @@ h2, h3 {
 }
 
 h2 {
-  font-size: 2em;
-}
+  font-size: 32px;
+}  
 
 h3 {
-  font-size: 1.5em;
+  font-size: 24px;
+}
+
+p {
+  line-height: 1.25em;
+}
+
+.container {
+  max-width: 1497px;
+  margin: 0 auto;
+  padding: 0 10px;
+  @media screen and (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
+
+.scroll-style {
+  &::-webkit-scrollbar {
+    width: 4px;
+    padding-bottom: 16px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(173, 182, 191, 0.4);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 46px;
+  }
+  &::-webkit-scrollbar-button:end:increment {
+    height: 16px;
+    display: block;
+    background: transparent;
+  }
 }

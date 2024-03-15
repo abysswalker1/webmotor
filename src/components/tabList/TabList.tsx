@@ -1,6 +1,6 @@
 import {FC} from 'react';
 import './tabList.scss'
-import Tab from './Tab';
+import Tab from './tab/Tab';
 import store from '../../store/store';
 
 const TabList: FC = () => {

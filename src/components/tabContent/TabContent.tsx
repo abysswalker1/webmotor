@@ -1,22 +1,24 @@
-import {FC, ReactNode} from 'react';
-import store from '../../store/store';
-import { observer } from 'mobx-react-lite';
-import './tab-content.scss';
+import { FC } from 'react';
+import './tabContent.scss';
+import Article from '../article/Article';
+import MainForm from '../mainForm/MainForm';
+import withCurrentIdCondition from '../high-order/withCurrentIdCondition';
 
-interface Props {
-  children?: ReactNode
-}
+const TabContentArtile = withCurrentIdCondition(1, Article);
+const TabContentForm = withCurrentIdCondition(2, MainForm);
 
-const TabContent: FC<Props> = ({ children }) => {
-  const {currentId} = store;
-
+const TabContent: FC = () => {
   return (
-    <div className='tab-content'>
-      <h2>Контент таба {currentId}</h2>
-      {children}
-      <button className='tab-content__button' type="button">Кнопка действия</button>
+    <div className="tab-content">
+      <div className="tab-content__inner scroll-style">
+        <TabContentArtile />
+        <TabContentForm />
+      </div>
+      <button className="tab-content__button" type="button">
+        Кнопка действия
+      </button>
     </div>
   );
 };
 
-export default observer(TabContent);
+export default TabContent;

@@ -1,0 +1,36 @@
+.tab-article {
+  font-size: 18px;
+  color: #000;
+
+  &__section {
+    margin-bottom: 23px;
+  }
+
+  ul, ol {
+    padding-left: 26px;
+  }
+
+  ul {
+    li {
+      &::marker {
+        font-size: 14px;
+      }
+    } 
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+
+    &__section {
+      margin-bottom: 18px;
+    }
+
+    ul {
+      li {
+        &::marker {
+          font-size: 12px;
+        }
+      } 
+    }
+  }
+}

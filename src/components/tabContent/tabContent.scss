@@ -1,0 +1,60 @@
+.tab-content {
+  flex: 1;
+  background-color: var(--bg);
+  padding: 20px 21px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 460px;
+  font-size: 18px;
+
+  &__inner {
+    flex: 1;
+    overflow-y: scroll;
+    padding-right: 44px;
+  }
+
+  &__button {
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 5px;
+    color: #fff;
+    padding: 14px;
+    font-size: 18px;
+    transition: background-color 0.15s;
+    &:hover {
+      background-color: #fff;
+      color: var(--primary);
+      font-weight: 500;
+    }
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex: unset;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 392px;
+    padding: 19px 9px 13px 20px;
+    h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    &__inner {
+      padding-right: 9px;
+    }
+
+    &__button {
+      position: relative;
+      font-size: 14px;
+      width: auto;
+      margin-left: -20px;
+      margin-right: -9px;
+    }
+  }
+}
